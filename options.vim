@@ -158,7 +158,8 @@ if has("mac") || has("macunix")
     set gfn=Menlo:h14
     set shell=/bin/bash
 elseif has("win16") || has("win32")
-    set gfn=Consolas:h12:cANSI
+    set gfn=DejaVu_Sans_Mono:h10:cANSI
+    cd  ~  " Default working directory (C:\Users\$USER)
 elseif has("linux")
     set gfn=Monospace\ 10
     set shell=/usr/bin/zsh
@@ -181,3 +182,6 @@ try
   set stal=2
 catch
 endtry
+
+"" vim Powerline.
+let g:Powerline_symbols = 'unicode'
