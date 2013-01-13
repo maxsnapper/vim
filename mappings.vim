@@ -14,8 +14,6 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -152,3 +150,16 @@ cnoremap <C-N> <Down>
 map ½ $
 cmap ½ $
 imap ½ $
+
+""
+" Re-map arrow keys to something more interesting!
+""
+map <Right> :bn<cr>
+map <Left>  :bp<cr>
+map <Up>    :NERDTreeToggle<cr>
+map <Down>  :TagbarToggle<cr>
+
+nmap <Left>  :bp<cr>
+nmap <Right> :bn<cr>
+nmap <Up>    :NERDTreeToggle<cr>
+nmap <Down>  :TagbarToggle<cr>
