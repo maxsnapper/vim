@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-markdown'
 Bundle 'php.vim'
 Bundle 'python.vim'
+Bundle 'xmledit'
 
 " GUI Enhancements
 Bundle 'scrooloose/nerdtree'
