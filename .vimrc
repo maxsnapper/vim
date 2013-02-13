@@ -31,6 +31,7 @@ endif
 " Important Colorschemes
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'wgibbs/vim-irblack'
 
 " Awesome extras
 Bundle 'mileszs/ack.vim'
@@ -40,6 +41,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'scratch.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
 
 " Everything is stored in these files.]
 " Make good use of them.

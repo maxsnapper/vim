@@ -148,7 +148,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme ir_black
+    colorscheme Tomorrow-Night
 endif
 
 set background=dark
@@ -185,3 +185,6 @@ endtry
 
 "" vim Powerline.
 let g:Powerline_symbols = 'unicode'
+
+" Quick Date insert.
+iab <expr> dts strftime("%c")
