@@ -4,6 +4,18 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" Remove php variables from tagbar
+let g:tagbar_type_php  = {
+\ 'ctagstype' : 'php',
+\ 'kinds'     : [
+    \ 'i:interfaces',
+    \ 'c:classes',
+    \ 'd:constant definitions',
+    \ 'f:functions',
+    \ 'j:javascript functions:1'
+\ ]
+\ }
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -146,7 +158,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("gui_running")
-    colorscheme solarized
+    colorscheme ir_black
 else
     colorscheme Tomorrow-Night
 endif
