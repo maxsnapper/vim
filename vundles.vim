@@ -33,3 +33,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'scratch.vim'
 Bundle 'tpope/vim-surround'
+
+" Syntax checking:
+Bundle 'scrooloose/syntastic'
