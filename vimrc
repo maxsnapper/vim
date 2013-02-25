@@ -14,6 +14,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'php.vim'
 Bundle 'python.vim'
 Bundle 'xmledit'
+Bundle 'scrooloose/syntastic'
 
 " GUI Enhancements
 Bundle 'scrooloose/nerdtree'
