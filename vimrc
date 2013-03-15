@@ -44,6 +44,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'scratch.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate'
 
 " Everything is stored in these files.]
 " Make good use of them.

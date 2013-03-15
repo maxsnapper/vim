@@ -4,6 +4,9 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" Disable dupe file checker in MBE as it is too slow.
+let g:miniBufExplCheckDupeBufs = 0
+
 " Remove php variables from tagbar
 let g:tagbar_type_php  = {
 \ 'ctagstype' : 'php',
@@ -15,6 +18,9 @@ let g:tagbar_type_php  = {
     \ 'j:javascript functions:1'
 \ ]
 \ }
+
+" Set php syntax checkers:
+let g:syntastic_php_checkers=['php', 'phpmd']
 
 " Enable filetype plugins
 filetype plugin on
