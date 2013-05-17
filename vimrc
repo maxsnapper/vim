@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 " Syntaxes
 Bundle 'tpope/vim-markdown'
 Bundle 'php.vim'
-Bundle 'python.vim'
+Bundle "pangloss/vim-javascript"
 Bundle 'xmledit'
 Bundle 'scrooloose/syntastic'
 
@@ -44,11 +44,12 @@ Bundle 'godlygeek/tabular'
 Bundle 'scratch.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate'
+Bundle 'SirVer/ultisnips'
+Bundle 'joonty/vdebug.git'
+Bundle 'scrooloose/nerdcommenter.git'
 
 " Everything is stored in these files.]
 " Make good use of them.
 source ~/.vim/functions.vim
 source ~/.vim/options.vim
 source ~/.vim/mappings.vim
-

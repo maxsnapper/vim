@@ -7,6 +7,17 @@ set history=700
 " Disable dupe file checker in MBE as it is too slow.
 let g:miniBufExplCheckDupeBufs = 0
 
+" Set background
+hi Normal          ctermfg=252 ctermbg=none
+
+" Map apache server fole locations to the source.
+let g:vdebug_options = {
+\ 'path_maps': {
+  \ "/var/www/dev.topdeck.travel": "/home/david/documents/development/src/travelzen-2"
+\ },
+\  'break_on_open': 0
+\ }
+
 " Remove php variables from tagbar
 let g:tagbar_type_php  = {
 \ 'ctagstype' : 'php',
