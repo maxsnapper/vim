@@ -15,6 +15,8 @@ Bundle 'php.vim'
 Bundle "pangloss/vim-javascript"
 Bundle 'xmledit'
 Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 
 " GUI Enhancements
 Bundle 'scrooloose/nerdtree'
