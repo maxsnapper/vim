@@ -1,6 +1,9 @@
 set nocompatible
 filetype off
 
+cd /home/david/development/src
+let g:rainbow_active = 1
+
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -17,11 +20,14 @@ Bundle 'xmledit'
 Bundle 'scrooloose/syntastic'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
+Bundle 'skammer/vim-css-color'
+Bundle 'hail2u/vim-css3-syntax'
 
 " GUI Enhancements
 Bundle 'scrooloose/nerdtree'
 Bundle 'fholgado/minibufexpl.vim'
-
+Bundle 'luochen1990/rainbow'
 Bundle 'Lokaltog/vim-powerline'
 
 " Requires Python (and installation of Jedi)

@@ -22,6 +22,13 @@ let g:tagbar_type_php  = {
 \ ]
 \ }
 
+let g:rainbow_conf = {
+\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\   'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan'],
+\   'operators': '_,_',
+\   'parentheses': [['(',')'], ['\[','\]'], ['{','}']]
+\}
+
 " Set php syntax checkers:
 let g:syntastic_php_checkers=['php', 'phpmd']
 
