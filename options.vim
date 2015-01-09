@@ -173,11 +173,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("gui_running")
-    colorscheme ir_black
-else
-    colorscheme Tomorrow-Night
-endif
+colorscheme ir_black
 
 set background=dark
 
@@ -216,3 +212,7 @@ let g:Powerline_symbols = 'unicode'
 
 " Quick Date insert.
 iab <expr> dts strftime("%c")
+
+" CtrlP Options
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
