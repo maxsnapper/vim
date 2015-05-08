@@ -1,7 +1,5 @@
 set nocompatible
 filetype off
-source ~/.vim/functions.vim
-cd /home/david/development
 let g:rainbow_active = 1
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -33,7 +31,7 @@ call vundle#begin()
 
   " Colorschemes
   Plugin 'twerth/ir_black'
-  Plugin 'davidhavard/paint_it_black'
+  "Plugin 'davidhavard/paint_it_black'
 
   " Awesome extras
   Plugin 'mileszs/ack.vim'

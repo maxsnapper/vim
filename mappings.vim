@@ -154,12 +154,12 @@ imap ½ $
 ""
 " Re-map arrow keys to something more interesting!
 ""
-map <Right> :bn<cr>
-map <Left>  :bp<cr>
-map <Up>    :NERDTreeToggle<cr>
-map <Down>  :TagbarToggle<cr>
+"map <Right> :bn<cr>
+"map <Left>  :bp<cr>
+"map <Up>    :NERDTreeToggle<cr>
+"map <Down>  :TagbarToggle<cr>
 
-nmap <Left>  :bp<cr>
-nmap <Right> :bn<cr>
-nmap <Up>    :NERDTreeToggle<cr>
-nmap <Down>  :TagbarToggle<cr>
+"nmap <Left>  :bp<cr>
+"nmap <Right> :bn<cr>
+"nmap <Up>    :NERDTreeToggle<cr>
+"nmap <Down>  :TagbarToggle<cr>
