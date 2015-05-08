@@ -59,11 +59,7 @@ set wildmenu
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-else
-    set wildignore+=.git\*,.hg\*,.svn\*
-endif
+set wildignore+=.git\*,.hg\*,.svn\*
 
 "Always show current position
 set ruler
@@ -177,25 +173,9 @@ colorscheme ir_black
 
 set background=dark
 
-" Set font according to system
-if has("mac") || has("macunix")
-    set gfn=Menlo:h14
-    set shell=/bin/bash
-elseif has("win16") || has("win32")
-    set gfn=DejaVu_Sans_Mono:h10:cANSI
-    cd  ~  " Default working directory (C:\Users\$USER)
-elseif has("linux")
-    set gfn=Monospace\ 10
-    set shell=/usr/bin/zsh
-endif
+set gfn=Monospace\ 10
+set shell=/usr/bin/zsh
 
-" Open MacVim in fullscreen mode
-if has("gui_macvim")
-    set fuoptions=maxvert,maxhorz
-    au GUIEnter * set fullscreen
-endif
-
-" Disable scrollbars (real hackers don't use scrollbars for navigation!)
 set guioptions-=r
 set guioptions-=R
 set guioptions-=l

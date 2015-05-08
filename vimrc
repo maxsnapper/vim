@@ -33,6 +33,7 @@ call vundle#begin()
 
   " Colorschemes
   Plugin 'twerth/ir_black'
+  Plugin 'davidhavard/paint_it_black'
 
   " Awesome extras
   Plugin 'mileszs/ack.vim'
