@@ -28,6 +28,12 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Fast window resizing with +/- keys (horizontal); / and * keys (vertical)
+  map <kPlus> <C-W>+
+  map <kMinus> <C-W>-
+  map <kDivide> <c-w><
+  map <kMultiply> <c-w>>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>
 
@@ -156,10 +162,12 @@ imap ½ $
 ""
 "map <Right> :bn<cr>
 "map <Left>  :bp<cr>
-"map <Up>    :NERDTreeToggle<cr>
-"map <Down>  :TagbarToggle<cr>
+map <F2>    :NERDTreeToggle<cr>
+map <F8>    :TagbarToggle<cr>
+nmap <F3>   :set invnumber<cr>
 
 "nmap <Left>  :bp<cr>
 "nmap <Right> :bn<cr>
 "nmap <Up>    :NERDTreeToggle<cr>
 "nmap <Down>  :TagbarToggle<cr>
+

@@ -31,6 +31,11 @@ let g:rainbow_conf = {
 
 " Set php syntax checkers:
 let g:syntastic_php_checkers=['php', 'phpmd']
+let g:syntastic_disabled_filetypes=['less']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Enable filetype plugins
 filetype plugin on
@@ -110,11 +115,11 @@ set foldcolumn=1
 set background=dark
 
 " Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions=''	" Eliminate the GUI. (It's useless, but gVim > terminal Vim because X11 and full 24-bit colours.
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+"if has("gui_running")
+"    set guioptions=''	" Eliminate the GUI. (It's useless, but gVim > terminal Vim because X11 and full 24-bit colours.
+"    set t_Co=256
+"    set guitablabel=%M\ %t
+"endif
 
 " Set utf8, the one true encoding.
 set encoding=utf8
@@ -164,12 +169,23 @@ set laststatus=2
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set mouse=a
+set ttym=urxvt
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme ir_black
+"set t_Co=256
+"let g:molokai_original=1
+"colorscheme molokai
+"colorscheme ir_black 
+colorscheme candystripe
+let g:rehash256 = 1
 
 set background=dark
 
@@ -181,6 +197,11 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=~/.vim/vimundo/
+
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -189,10 +210,30 @@ endtry
 
 "" vim Powerline.
 let g:Powerline_symbols = 'unicode'
-
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
+set guifont=Source\ Code\ Pro\ for\ Powerline\ 8
 " Quick Date insert.
 iab <expr> dts strftime("%c")
 
 " CtrlP Options
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+
+" GVIM Settings
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+":set guioptions-=r  "remove right-hand scroll bar
+":set guioptions-=L  "remove left-hand scroll bar
+
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
