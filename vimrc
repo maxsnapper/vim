@@ -55,6 +55,8 @@ if !has('nvim')
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'suan/vim-instant-markdown'
+    Bundle 'geoffharcourt/vim-matchit'
+    Plugin 'vim-php/tagbar-phpctags.vim'
 
   call vundle#end()
 endif

@@ -1,8 +1,23 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
 " Sets how many lines of history VIM has to remember
 set history=700
+" 'unnamed' to use the * register like unnamed register
+" 'autoselect' to always put selected text into register *
+set clipboard=unnamed,unnamedplus,exclude:cons\|linux
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+syntax enable 
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Line Numbers!
+set number
 
 " Disable dupe file checker in MBE as it is too slow.
 let g:miniBufExplCheckDupeBufs = 0
@@ -37,16 +52,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-syntax enable 
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Line Numbers!
-set number
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -176,6 +181,7 @@ set statusline+=%*
 set mouse=a
 set ttym=urxvt
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,11 +197,7 @@ set background=dark
 
 set gfn=Monospace\ 10
 set shell=/usr/bin/zsh
-
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
+set sidescroll=1
 
 " tell it to use an undo file
 set undofile
@@ -224,8 +226,10 @@ let g:ctrlp_cmd = 'CtrlP'
 " GVIM Settings
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
-":set guioptions-=r  "remove right-hand scroll bar
-":set guioptions-=L  "remove left-hand scroll bar
+set guioptions=r     "Right-hand scrollbar is always present
+set guioptions=R     "Right-hand scrollbar is present when there is a vertically split window
+set guioptions-=l    "Remove left-hand scrollbar
+set guioptions-=L    "Remove left-hand scroll bar
 
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
