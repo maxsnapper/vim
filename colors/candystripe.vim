@@ -9,7 +9,7 @@ let colors_name = "candystripe"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-    hi CursorLine                       guibg=#000000
+    hi CursorLine                       guibg=#1a1a1a
     hi CursorColumn                     guibg=#2d2d2d
     hi MatchParen       guifg=#ffffff   guibg=#333333   gui=bold
     hi Pmenu            guifg=#ffffff   guibg=#666666
@@ -18,8 +18,8 @@ endif
 
 " General colors
 hi Cursor                               guibg=#1c686d
-hi Normal               guifg=#f0f0f0   guibg=#292929
-hi NonText              guifg=#a0a0a0   guibg=#292929
+hi Normal               guifg=#f0f0f0   guibg=#1a1a1a
+hi NonText              guifg=#a0a0a0   guibg=#1a1a1a
 hi LineNr               guifg=#a0a0a0   guibg=#303030
 hi StatusLine           guifg=#333333   guibg=#e0e0e0   gui=italic
 hi StatusLineNC         guifg=#303030   guibg=#606060
@@ -27,7 +27,7 @@ hi VertSplit            guifg=#333333   guibg=#333333
 hi Folded               guibg=#384048   guifg=#a0a8b0
 hi Title                guifg=#ffffff                   gui=bold
 hi Visual               guifg=#ffffff   guibg=#444444
-hi SpecialKey           guifg=#808080   guibg=#292929
+hi SpecialKey           guifg=#808080   guibg=#1a1a1a
 hi ColorColumn                          guibg=#333333
 hi Search               guifg=#ffffff   guibg=#4f2b49   gui=italic
 
