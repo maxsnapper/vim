@@ -8,6 +8,8 @@ nmap <leader>w :w!<cr>
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
+vnoremap < <gv
+vnoremap > >gv
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -170,4 +172,6 @@ nmap <F3>   :set invnumber<cr>
 "nmap <Right> :bn<cr>
 "nmap <Up>    :NERDTreeToggle<cr>
 "nmap <Down>  :TagbarToggle<cr>
+
+cmap w!! w !sudo tee % >/dev/null
 
