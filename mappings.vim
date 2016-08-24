@@ -151,7 +151,6 @@ cnoremap <C-A>		<Home>
 cnoremap <C-E>		<End>
 cnoremap <C-K>		<C-U>
 
-cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
 " Map ½ to something useful
@@ -175,3 +174,6 @@ nmap <F3>   :set invnumber<cr>
 
 cmap w!! w !sudo tee % >/dev/null
 
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <C-b> :Unite buffer<cr>
+nnoremap <C-s> :Unite grep:.<cr>

@@ -2,16 +2,22 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
+
 " Sets how many lines of history VIM has to remember
 set history=700
 " 'unnamed' to use the * register like unnamed register
 " 'autoselect' to always put selected text into register *
-set clipboard=unnamed,unnamedplus,exclude:cons\|linux
+if !has('nvim')
+  set clipboard=unnamed,unnamedplus,exclude:cons\|linux
+else
+  set clipboard+=unnamedplus
+endif
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 syntax enable 
+set relativenumber
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -37,6 +43,7 @@ let g:tagbar_type_php  = {
 \ ]
 \ }
 
+let g:rainbow_active = 1
 let g:rainbow_conf = {
 \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 \   'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan'],
@@ -179,7 +186,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set mouse=a
-set ttym=urxvt
+if !has('nvim')
+  set ttym=urxvt
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -196,7 +205,7 @@ let g:rehash256 = 1
 set background=dark
 
 set gfn=Monospace\ 10
-set shell=/usr/bin/zsh
+set shell=/usr/bin/bash "zsh
 set sidescroll=1
 
 " tell it to use an undo file
@@ -211,21 +220,16 @@ catch
 endtry
 
 "" vim Powerline.
-let g:Powerline_symbols = 'unicode'
+let g:PowerLine_symbols = 'unicode'
 let g:airline_powerline_fonts = 1
-let g:Powerline_symbols = 'fancy'
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 8
+let g:Powerline_symbols = 'unicode'
+set guifont=Inconsolata\ for\ Powerline\ 10
 " Quick Date insert.
 iab <expr> dts strftime("%c")
 
-" CtrlP Options
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-
 " GVIM Settings
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
 set guioptions=r     "Right-hand scrollbar is always present
 set guioptions=R     "Right-hand scrollbar is present when there is a vertically split window
 set guioptions-=l    "Remove left-hand scrollbar
@@ -241,3 +245,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+autocmd BufWinEnter,WinEnter term://* startinsert
+
+
